@@ -28,6 +28,14 @@ public class CounterViewModels extends ViewModel {
         scoreMutableLiveData.setValue(score);
         Log.d("Point Away : ", String.valueOf(score.getAwayScore()));
     }
+
+    public void resetScore(){
+        score.setHomeScore(0);
+        score.setAwayScore(0);
+        scoreMutableLiveData.setValue(score);
+        Log.d("Reset For Home : ", String.valueOf(score.getHomeScore()));
+        Log.d("Reset For Away : ", String.valueOf(score.getAwayScore()));
+    }
 }
 
 //Note
