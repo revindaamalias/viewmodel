@@ -9,6 +9,10 @@ public class Score {
         this.awayScore = awayScore;
     }
 
+    public Score() {
+
+    }
+
     public int getHomeScore() {
         return homeScore;
     }
