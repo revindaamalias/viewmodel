@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+<!--        data yang di intents bukan lagi models, tetapi viewmodelsnya-->
+<!--        seharusnya punya nya score, tetapi kita masukan di counterviewmodels-->
         <variable
-            name="fragment"
-            type="com.example.view_model.fragments.CounterFragment" />
-        <variable
-            name="score"
-            type="com.example.view_model.models.Score" />
+            name="counterViewModel"
+            type="com.example.view_model.viewmodels.CounterViewModels" />
 
     </data>
 
@@ -51,18 +50,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@{Integer.toString(score.homeScore)}"
+            android:text="@{Integer.toString(counterViewModel.score.homeScore)}"
             android:textSize="64sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+<!--pada integer toString, ditambahkan counterViewModel-->
         <TextView
             android:id="@+id/txtScoreAway"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@{Integer.toString(score.awayScore)}"
+            android:text="@{Integer.toString(counterViewModel.score.awayScore)}"
             android:textSize="64sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
